@@ -125,6 +125,6 @@ class VehicleControllerTest {
         mockMvc.perform(put("/api/vehicles/1")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(new ObjectMapper().writeValueAsString(updateVehicle)))
-                .andExpect(status().isNotFound());
+                .andExpect(status().isBadRequest());
     }
 }
